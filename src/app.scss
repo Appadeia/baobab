@@ -4,7 +4,7 @@ $mdc-theme-on-primary: #ffffff;
 $mdc-theme-on-secondary: #ffffff;
 
 @mixin notoserif {
-    font-family: 'Raleway', serif;
+    font-family: 'Raleway', sans-serif;
 }
 @import "reset";
 @import "@material/top-app-bar/mdc-top-app-bar";
@@ -56,5 +56,27 @@ body {
     .mdc-top-app-bar__title {
         @include notoserif;
         font-weight: 700;
+    }
+}
+.baobab_data-table {
+    border-collapse: collapse;
+    margin: 1%;
+    @include mdc-elevation(2);
+    tr { 
+        border: solid;
+        border-color: rgb(201, 199, 199);
+        border-width: 1px 0;
+        &:first-child {
+            border-top: none;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    td, th {
+        padding: 5px;
+        &:first-child {
+            padding-left: 1%;
+        }
     }
 }
