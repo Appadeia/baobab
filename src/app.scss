@@ -3,12 +3,16 @@ $mdc-theme-secondary: #c47c39;
 $mdc-theme-on-primary: #ffffff;
 $mdc-theme-on-secondary: #ffffff;
 
+@mixin notoserif {
+    font-family: 'Raleway', serif;
+}
 @import "reset";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
 @import "@material/card/mdc-card";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
+@import "_data-table";
 
 html {
     background-color: #ead1ff;
@@ -37,5 +41,20 @@ body {
     td {
         @include mdc-elevation(2);
         padding: 10px;
+    }
+}
+.mdl-data-table {
+    @include mdc-elevation(2);
+    margin: 1%;
+    border-radius: 4px;
+}
+.mdc-typography {
+    @include notoserif;
+    h1 {
+        @include notoserif;
+    }
+    .mdc-top-app-bar__title {
+        @include notoserif;
+        font-weight: 700;
     }
 }
