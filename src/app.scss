@@ -1,0 +1,41 @@
+$mdc-theme-primary: #58006e;
+$mdc-theme-secondary: #c47c39;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #ffffff;
+
+@import "reset";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
+@import "@material/card/mdc-card";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+
+html {
+    background-color: #ead1ff;
+    min-height: 100vh;
+}
+body {
+    min-height: 100vh;
+}
+.baobab_pagecard {
+    line-height: 1.6;
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    ul, ol {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
+.baobab_table {
+    border-spacing: 6px;
+    td {
+        @include mdc-elevation(2);
+        padding: 10px;
+    }
+}
