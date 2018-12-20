@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+    background-color: lighten( $mdc-theme-primary, 80%);
+    width: 10px;
+}
+::-webkit-scrollbar-button {
+    width: 5px;
+    background-color: lighten( $mdc-theme-primary, 10%);
+}
+::-webkit-scrollbar-thumb {
+    width: 3px;
+    background-color: lighten( $mdc-theme-primary, 20%);
+}

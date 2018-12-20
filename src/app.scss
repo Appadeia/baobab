@@ -13,10 +13,11 @@ $mdc-theme-on-secondary: #ffffff;
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "_data-table";
+@import "scrollbar";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 html {
-    background-color: #d1ffec;
+    background-color: lighten( $mdc-theme-primary, 70%);
     min-height: 100vh;
 }
 body {
