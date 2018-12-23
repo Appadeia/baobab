@@ -16,6 +16,15 @@ $mdc-theme-on-secondary: #ffffff;
 @import "scrollbar";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
+a {
+    color: lighten( $mdc-theme-primary, 10% );
+    transition: 0.1s;
+    transition-timing-function: $mdc-animation-sharp-curve-timing-function; 
+    width: initial;
+    &:hover {
+        color: darken( $mdc-theme-primary, 10% );
+    } 
+}
 .mdc-top-app-bar--short-collapsed {
     border-radius: 0 0 0 0;
     clip-path: polygon(100% 0, 100% 74%, 76% 100%, 0 100%, 0 0);
@@ -28,7 +37,6 @@ body {
     min-height: 100vh;
 }
 .baobab_pagecard {
-    font-size: 1.25vw;
     line-height: 1.6;
     border-radius: 7px;
     padding: 2%;
