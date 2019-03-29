@@ -1,20 +1,13 @@
 #!/usr/bin/env bash
-cd /home/carson/git/baobab
-cp index.html ..
-cp bundle.js ..
-cp bundle.css ..
-cd ../appadeia
-mv ../index.html .
-mv ../bundle.js .
-mv ../bundle.css .
-cd /home/carson/git/appadeia/appadeia.github.io
-mv ../index.html .
-mv ../bundle.js .
-mv ../bundle.css .
-cd /home/carson/git/appadeia/appadeia.github.io/baobab
-mv ../index.html .
-mv ../bundle.js .
-mv ../bundle.css .
+BAOBAB_DIR="/home/carsonblack/git/baobab"
+AGI="/home/carsonblack/git/appadeia.github.io/baobab"
+function cperoni() {
+	cp "$BAOBAB_DIR/$1" "$AGI/$1"
+}
+cperoni index.html
+cperoni bundle.js
+cperoni bundle.scss
+cd "$AGI"
 git add *
 git commit -m "update baobab"
 git push
